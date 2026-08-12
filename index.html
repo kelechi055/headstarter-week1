@@ -7,6 +7,7 @@
   <title>Kelechi's Portfolio</title>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYR78R9WE0"></script>
@@ -37,38 +38,57 @@
 </head>
 <body>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ7BLPZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <div class="site-background" aria-hidden="true"></div>
   <div class="scroll-progress-container">
     <div class="scroll-progress-bar"></div>
   </div>
 
-  <!--TOP NAVBAR-->
-    <!-- KO LOGO -->
-    <header class="header" id="home">
-        <h1>
-            <a href="/">
-                <img class="interactive-ko spin-on-hover" src="images/ko-white.png" alt="Kelechi Opurum" width="50" height="50" style="outline: olivedrab;">
-            </a>
-        </h1>
-        <!--SOCIALS-->
-        <div class="topright">
-            <a href="https://www.linkedin.com/in/kelechi-opurum" target="_blank">
-                <img class="interactive-img" src="images/linkedin-white.png" 
-                alt="Lets connect!"
-                length="25"
-                width="25">
-            </a>
-            <a class="visit-btn" href="https://github.com/kelechi055" target="_blank">
-                <img class="interactive-img" src="images/gitwhite.png"
-                alt="GitHub"
-                length="30"
-                width="30">
-            </a>
-            <a href="mailto:kelechiopurum2005@gmail.com" target="_blank">
-                <img class="interactive-img" src="images/mail.png"
-                alt="Shoot me a email"  
-                length="30"
-                width="30">
-            </a>
+  <!-- PRIMARY NAVIGATION -->
+    <header class="site-header" id="home" data-site-header>
+        <a class="site-brand" href="" aria-label="Kelechi Opurum — back to top">
+            <span class="site-brand__mark" aria-hidden="true">
+                <img src="images/ko-white.png" alt="" width="34" height="34">
+            </span>
+        </a>
+
+        <button
+            class="site-nav-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-controls="site-nav-menu"
+            aria-expanded="false"
+            data-site-nav-toggle
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="site-nav-panel" id="site-nav-menu" data-site-nav-panel>
+            <nav class="site-nav-links" aria-label="Primary navigation">
+                <a href="#about-me" data-site-nav-link>About</a>
+                <a href="#experience" data-site-nav-link>Experience</a>
+                <a href="#projects" data-site-nav-link>Projects</a>
+            </nav>
+
+            <span class="site-nav-divider" aria-hidden="true"></span>
+
+            <div class="site-nav-actions">
+                <a class="site-social-link" href="https://github.com/kelechi055" target="_blank" rel="noopener noreferrer" aria-label="View Kelechi's GitHub profile">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.82a9.6 9.6 0 0 1 2.5.34c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path>
+                    </svg>
+                </a>
+                <a class="site-social-link" href="https://www.linkedin.com/in/kelechi-opurum/" target="_blank" rel="noopener noreferrer" aria-label="Connect with Kelechi on LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M6.5 8.25H3.25V21H6.5V8.25ZM4.88 3A1.88 1.88 0 1 0 4.88 6.76 1.88 1.88 0 0 0 4.88 3ZM21 13.69c0-3.84-2.05-5.63-4.79-5.63-2.2 0-3.19 1.21-3.74 2.06V8.25H9.22V21h3.25v-6.31c0-1.66.31-3.27 2.37-3.27 2.03 0 2.06 1.9 2.06 3.38V21H21v-7.31Z"></path>
+                    </svg>
+                </a>
+                <a class="site-social-link site-social-link--mail" href="mailto:kelechiopurum2005@gmail.com" aria-label="Email Kelechi">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M3.75 6.75h16.5v10.5H3.75zM4.5 7.5l7.5 5.25 7.5-5.25"></path>
+                    </svg>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -99,14 +119,6 @@
             </p>
         </div>
     </section>
-    
-    <button class="menu-toggle" aria-label="Open menu">
-        &#9776; <!-- This is a hamburger icon -->
-    </button>
-
-    <!--typrwriter script-->
-    <script src="script.js"></script>
-
 
     <!--scroll button-->
     <div class="center hero-scroll-cue">
@@ -115,451 +127,678 @@
         </a>
     </div>
 
-  <!-- ABOUT SECTION -->
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about-me" aria-labelledby="about-title">
+        <div class="about-inner">
+            <header class="about-heading">
+                <p class="about-eyebrow">About me</p>
+                <div class="about-hero">
+                    <h2 id="about-title">It started with a Nintendo DS.</h2>
+                    <div class="about-device" aria-hidden="true">
+                        <span class="about-device-orbit" data-about-depth="2"></span>
+                        <img class="about-memory about-memory--mario" data-about-depth="11" src="images/mario.png" alt="" width="434" height="687" loading="lazy" decoding="async">
+                        <img class="about-memory about-memory--zelda" data-about-depth="9" src="images/zelda.png" alt="" width="688" height="687" loading="lazy" decoding="async">
+                        <img class="about-memory about-memory--pokemon" data-about-depth="6" src="images/pokemon-characters.png" alt="" width="2467" height="1794" loading="lazy" decoding="async">
+                        <img class="about-device-console" data-about-depth="4" src="images/nintendo ds.png" alt="" width="915" height="687" loading="lazy" decoding="async">
+                        <span class="about-memory-feature" data-about-depth="14">
+                            <img class="about-memory-logo" src="images/bakugan-battle-brawlers.png" alt="" width="1000" height="1000" loading="lazy" decoding="async">
+                            <img class="about-memory-cartridge" src="images/bakugan.png" alt="" width="516" height="687" loading="lazy" decoding="async">
+                        </span>
+                    </div>
+                </div>
+            </header>
 
-      <!-- ABOUT ME SECTION -->
-      <section class="about-section" style="padding: 3rem 0; margin-bottom: 50px;">
-        <div class="about-container" 
-            style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;">
-        
-            <!-- About Me Title -->
-            <h2 id="about-me"class="interactive-text" style="
-                color: #FFFFFF;
-                animation: slideUp 2s forwards;
-                font-size: 3rem;
-                font-weight: bold;
-                margin-bottom: 1rem;
-                margin-top: 100;
-                cursor: url('/images/cursor.png') 15 6, auto;
-            ">
-                a little about me 👋<span class="green-text"></span> <br>
-                <div id="typing-container">
-                    <div id="typing-text"></div>
+            <div class="about-layout">
+                <div class="about-story">
+                    <p>As a kid, I disassembled my Nintendo DS just to understand how it worked. From there, I started making games in MIT Scratch, then Roblox, took AP Computer Science, and eventually chose to study Computer Science and Data Science at Loyola University Maryland.</p>
+                    <p>I still bring that same curiosity to my work today, whether I’m building full-stack products, cloud infrastructure, or Linux systems.</p>
+                    <div class="about-links" aria-label="Learn more about Kelechi">
+                        <a href="#projects">See what I’ve built <span aria-hidden="true">↓</span></a>
+                        <a href="https://www.linkedin.com/in/kelechi-opurum/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                    </div>
                 </div>
-            </h2>
-        </div>
-    
-        <div style="
-            border: 1px solid #222222;
-            border-radius: 2.5rem;
-            padding: 1.5rem;
-            max-width: 48rem;
-            width: 100%;
-            animation: slideUp 1s forwards;
-        ">
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            
-            <!-- Heading and Badges Row -->
-            <div>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem;">
-                    <span style="
-                        background: #3A7AAC;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">Python</span>
-                    <span style="
-                        background: #c21010;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">Java</span>
-                    <span style="
-                        background: #00AAC4;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">React</span>
-                    <span style="
-                        background: #3178C6;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">Typescript</span>
-                    <span style="
-                        background: #ffffff;
-                        color: black;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">Next.js</span>
-                    <span style="
-                        background: #03b3ff;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">AWS</span>
-                    <span style="
-                        background: #7B42BC;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">Terraform</span>
-                    <span style="
-                        background: #FEB201;
-                        padding: 0.3rem 0.75rem;
-                        border-radius: 0.375rem;
-                        font-size: 0.875rem;
-                    ">Linux</span>
-                    <span style="
-                    background: #3f3f46;
-                    padding: 0.3rem 0.75rem;
-                    border-radius: 0.375rem;
-                    font-size: 0.875rem;
-                    ">+ More</span>
-                </div>
+
+                <aside class="about-details" aria-label="Quick facts">
+                    <div class="about-detail">
+                        <span>Right now</span>
+                        <strong>Finishing my CS degree</strong>
+                        <small>Graduating May 2027</small>
+                    </div>
+                    <div class="about-detail">
+                        <span>Looking ahead</span>
+                        <strong>New-grad software engineering</strong>
+                        <small>Full-stack, backend, cloud, and systems</small>
+                    </div>
+                    <div class="about-detail">
+                        <span>Outside code</span>
+                        <strong>Basketball, staying active, and touching grass</strong>
+                    </div>
+                </aside>
             </div>
-    
-            <!-- My Main about me Paragraph -->
-            <p style="color: #A7A7A7; line-height: 1.6; margin-bottom: 0; font-size: 18px; font-weight: 300;" >
-                > currently interning at <a href="https://www.arm.com" style="color: #00C1DE; text-decoration: underline; font-weight: 450;" target="_blank">arm</a>
-                as a software engineer on the Cloud AI team 🤖.
-                <br/>
-                > outside of coding, i enjoy working out, playing sports and creating content on my 🎥 youtube channel (32K subs & 5M+ views).
-            </p>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
 
     <!-- EXPERIENCE SECTION -->
-      <section class="about-section" style="padding: 3rem 0;">
-        <div style="
-            border: 1px solid #222222;
-            border-radius: 2.5rem;
-            padding: 1.5rem;
-            max-width: 48rem;
-            width: 100%;
-            animation: slideUp 1s forwards;
-        ">
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="experience-inner">
+            <header class="experience-intro experience-reveal">
+                <div>
+                    <h2 id="experience-title">My Experience</h2>
+                    <p>I’ve worked on full-stack apps, cloud infrastructure, Linux performance tooling, AI projects, and accessible software.</p>
+                </div>
+                <a class="experience-profile-link" href="https://www.linkedin.com/in/kelechi-opurum/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn profile <span aria-hidden="true">↗</span>
+                </a>
+            </header>
 
-            <!-- My Experience Block (main)-->
-            <div id="experience">
-                <div class="experience-heading">
+            <div class="experience-featured-grid">
+                <!-- FEATURED ROLE TEMPLATE: duplicate this article for a future role worth highlighting. -->
+                <article class="experience-card experience-card--arm experience-reveal">
+                    <div class="experience-card-topline">
+                        <a class="experience-company" href="https://www.arm.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/arm2.jpg" alt="" width="52" height="52">
+                            <span><strong>Arm</strong><small>Cloud AI, Software Enablement</small></span>
+                        </a>
+                        <span class="experience-card-meta"><span class="experience-date">May – Aug 2026</span><span class="experience-location">Austin, TX</span></span>
+                    </div>
+                    <div class="experience-card-copy">
+                        <h3>Software Engineering Intern</h3>
+                        <p>Built reusable software that automates Linux kernel benchmarking across AWS, Microsoft Azure, GCP, and OCI for Arm and x86 systems. Developed the end-to-end workflow with Python, Terraform, Ansible, and GitLab CI/CD, covering cloud provisioning, environment preparation, benchmark execution, and result collection.</p>
+                    </div>
+                    <div class="experience-tech" aria-label="Technologies used at Arm">
+                        <span>Python</span><span>Linux</span><span>Terraform</span><span>Ansible</span><span>GitLab CI/CD</span><span>Automation</span><span>Performance Engineering</span>
+                    </div>
+                </article>
+
+                <!-- FEATURED ROLE TEMPLATE: keep the same classes; the company modifier is optional. -->
+                <article class="experience-card experience-card--cvni experience-reveal">
+                    <div class="experience-card-topline">
+                        <a class="experience-company" href="https://www.linkedin.com/company/cybervillage-networkers-inc./posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                            <img src="images/cvni.jpg" alt="" width="52" height="52">
+                            <span><strong>CyberVillage Networkers</strong><small>Mobile &amp; Frontend</small></span>
+                        </a>
+                        <span class="experience-card-meta"><span class="experience-date">Jan – Jun 2026</span><span class="experience-location">Remote</span></span>
+                    </div>
+                    <div class="experience-card-copy">
+                        <h3>Application Developer Intern</h3>
+                        <p>Built frontend and mobile features for client applications, translating Figma designs into responsive interfaces. Improved accessibility through WCAG-focused development and assistive-technology testing.</p>
+                    </div>
+                    <div class="experience-tech" aria-label="Focus areas at CyberVillage Networkers">
+                        <span>JavaServer Pages</span><span>HTML</span><span>CSS</span><span>Mobile</span><span>Figma</span><span>Web Accessibility</span><span>CMMC</span>
+                    </div>
+                </article>
+            </div>
+
+            <article class="experience-creator experience-reveal">
+                <div class="experience-creator-main">
+                    <img src="images/yt.png" alt="" width="52" height="52">
                     <div>
-                        <h3>My Experience</h3>
+                        <h3>Gaming Content Creator &amp; Partner</h3>
+                        <span class="experience-creator-company">YouTube</span>
+                        <p>Started a gaming channel for fun in middle school and grew it into a community and source of income through content monetization, sponsorships, and affiliate marketing.</p>
                     </div>
                 </div>
-
-                <div class="experience-section-label">Current</div>
-
-                <!-- Experience Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Software Engineering Intern, Cloud AI</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.arm.com/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/arm2.jpg" alt="Arm" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem;">
-                                    Arm
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(16,185,129,0.125); color: #4ade80; border: 1px solid rgba(16,185,129,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #4ade80; border-radius: 50%; margin-right: 4px; animation: blink 1.5s infinite;"></span>
-                            May 2026 - Present
-                        </span>
+                <dl class="experience-creator-stats">
+                    <div class="experience-creator-stat experience-creator-stat--audience">
+                        <dt>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8m13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            Subs
+                        </dt>
+                        <dd data-creator-count="32000" data-count-format="number" aria-label="More than 32,000 subscribers">32,000+</dd>
                     </div>
-                    <p class="experience-impact">Building cloud automation and Linux kernel benchmarking workflows across multi-cloud environments.</p>
-                </div>
-
-                <!-- Experience Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Application Developer Intern, Mobile & Frontend</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.linkedin.com/company/cybervillage-networkers-inc./posts/?feedView=all" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/cvni.jpg" alt="CyberVillage Networkers, Inc" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem">
-                                    CyberVillage Networkers, Inc
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(16,185,129,0.125); color: #4ade80; border: 1px solid rgba(16,185,129,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #4ade80; border-radius: 50%; margin-right: 4px; animation: blink 1.5s infinite;"></span>
-                            Jan 2026 - Present
-                        </span>
+                    <div class="experience-creator-stat experience-creator-stat--views">
+                        <dt>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                            Views
+                        </dt>
+                        <dd data-creator-count="5000000" data-count-format="number" aria-label="More than 5 million views">5,000,000+</dd>
                     </div>
-                    <p class="experience-impact">Developing frontend and mobile features while improving accessibility across client applications.</p>
-                </div>
-
-                <!-- Experience Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Content Creator, 32K subs & 5M+ views</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                     <img src="images/yt.png" alt="YouTube" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem">
-                                    YouTube
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(16,185,129,0.125); color: #4ade80; border: 1px solid rgba(16,185,129,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #4ade80; border-radius: 50%; margin-right: 4px; animation: blink 1.5s infinite;"></span>
-                            April 2017 - Present
-                        </span>
+                    <div class="experience-creator-stat experience-creator-stat--earnings">
+                        <dt>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20m5-16.5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            Earned
+                        </dt>
+                        <dd data-creator-count="5" data-count-format="figures" aria-label="Five figures earned">5 figures</dd>
                     </div>
-                    <p class="experience-impact">Started my channel in middle school and made 5-figures through years of consistent creation.</p>
-                </div>
+                </dl>
+            </article>
 
-                <div class="experience-section-label">Previous</div>
-
-                <!-- ExperienceBox -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">AI/ML Engineer, NASA Proposal Writing & Evaluation Experience</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.lspace.asu.edu/proposal-writing-academy" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/nasa.png" alt="NASA L'Space" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem;">
-                                    L'Space
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(107,114,128,0.125); color: #6b7280; border: 1px solid rgba(107,114,128,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #6b7280; border-radius: 50%; margin-right: 4px;"></span>
-                            Sep 2025 - Dec 2025
-                        </span>
-                    </div>
-                    <p class="experience-impact">Contributed to a $10K NASA grant proposal for an AI vision lens-contamination system.</p>
-                </div>
-
-                <!-- Experience Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Software Engineering Intern, Infrastructure</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.arm.com/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/arm2.jpg" alt="Arm" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem;">
-                                    Arm
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(107,114,128,0.125); color: #6b7280; border: 1px solid rgba(107,114,128,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #6b7280; border-radius: 50%; margin-right: 4px;"></span>
-                            May 2025 - Aug 2025
-                        </span>
-                    </div>
-                    <p class="experience-impact">Built benchmarking infrastructure and CI/CD workflows for Linux kernel performance analysis.</p>
-                </div>
-
-                <!-- Experience Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Application Developer Intern, Frontend (Accessibility)</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.linkedin.com/company/cybervillage-networkers-inc./posts/?feedView=all" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/cvni.jpg" alt="CyberVillage Networkers, Inc" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem">
-                                    CyberVillage Networkers, Inc
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(107,114,128,0.125); color: #6b7280; border: 1px solid rgba(107,114,128,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #6b7280; border-radius: 50%; margin-right: 4px;"></span>
-                            Jan 2025 – May 2025
-                        </span>
-                    </div>
-                    <p class="experience-impact">Improved UI functionality and accessibility across client websites through WCAG & ADA-focused updates.</p>
-                </div>
-
-                <!-- Experience Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Software Engineering Intern</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.openqquantify.com/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                <img src="images/openq.jpg" alt="OpenQQuantify" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem">
-                                OpenQQuantify
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(107,114,128,0.125); color: #6b7280; border: 1px solid rgba(107,114,128,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #6b7280; border-radius: 50%; margin-right: 4px;"></span>
-                            Sep 2024 – Dec 2024
-                        </span>
-                    </div>
-                    <p class="experience-impact">Developed responsive Svelte web application features with a distributed engineering team.</p>
-                </div>
-
-                <h3 class="fellowship-heading">Fellowships</h3>
-
-                <!-- Fellowship Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Engineering Fellow</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://programs.code2040.org/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/code2040.jpg" alt="CODE2040" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem;">
-                                    CODE2040
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(16,185,129,0.125); color: #4ade80; border: 1px solid rgba(16,185,129,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #4ade80; border-radius: 50%; margin-right: 4px; animation: blink 1.5s infinite;"></span>
-                            Sep 2025 - Present
-                        </span>
-                    </div>
-                    <p class="experience-impact">Selected for a national engineering fellowship focused on growth, community, and technical excellence.</p>
-                </div>
-
-                <!-- Fellowship Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.5rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Software Engineering Fellow</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.bvcc.vc/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/bvcc-favicon.png" alt="Black Venture Capital Consortium" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem;">
-                                    Black Venture Capital Consortium
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(107,114,128,0.125); color: #6b7280; border: 1px solid rgba(107,114,128,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #6b7280; border-radius: 50%; margin-right: 4px;"></span>
-                            Sep 2024 – Dec 2024
-                        </span>
-                    </div>
-                    <p class="experience-impact">Completed a software engineering cohort covering web dev, SDLC, data structures, cloud, APIs, and QA.</p>
-                </div>
-
-                <!-- Fellowship Box -->
-                <div style="background-color: rgba(63,63,70,0.2); border-radius: 0.375rem; padding: 1rem; margin-top: 1rem;">
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem;">
-                        <div>
-                            <h5 style="font-size: 1rem; font-weight: 500; margin-bottom: 0.125rem;">Software Engineering Fellow</h5>
-                            <p style="color: #a1a1aa; font-size: 0.875rem; display: flex; align-items: center;">
-                                <a href="https://www.headstarter.co/" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit;">
-                                    <img src="images/headstarter-favicon.png" alt="Headstarter" style="width: 50px; height: 50px; margin-right: 6px; border-radius: 0.5rem;">
-                                    Headstarter
-                                </a>
-                            </p>
-                        </div>
-                        <span style="background-color: rgba(107,114,128,0.125); color: #6b7280; border: 1px solid rgba(107,114,128,0.2); border-radius: 0.375rem; padding: 0.25rem 0.5rem; font-size: 0.875rem; margin-left: auto; display: inline-flex; align-items: center;">
-                            <span style="width: 8px; height: 8px; background-color: #6b7280; border-radius: 50%; margin-right: 4px;"></span>
-                            Jul 2024 – Sep 2024
-                        </span>
-                    </div>
-                    <p class="experience-impact">Completed engineering training, networked with industry talent, and launched 3 full-stack AI apps.</p>
-                </div>
+            <div class="experience-group-heading experience-reveal">
+                <span>Earlier experience</span>
+                <button class="experience-toggle-all" type="button" aria-expanded="false" aria-controls="experience-history">Expand all</button>
             </div>
 
-            <!-- Additional C2Action -->
-            <!--Get in Touch Button 1-->
-            <div class="center-container">
-                <a href="mailto:kelechiopurum2005@gmail.com" class="contact-button">
-                    <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
-                        <path d="M4 4h16v16H4z" fill="none"/>
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                    <span class="btn-text">Get In Touch</span>
-                </a>
+            <div class="experience-history experience-reveal" id="experience-history">
+                <!-- PREVIOUS ROLE TEMPLATE: duplicate one details block and update its summary/details. -->
+                <details class="experience-history-item">
+                    <summary>
+                        <span class="experience-history-when"><time datetime="2025-09">Sep — Dec 2025</time><span class="experience-location">Remote</span></span>
+                        <span class="experience-history-marker" aria-hidden="true"></span>
+                        <span class="experience-history-overview">
+                            <span class="experience-history-identity">
+                                <img src="images/nasa.png" alt="" width="42" height="42">
+                                <span><strong>AI/ML Engineer</strong><small>NASA L'SPACE, Proposal Writing & Evaluation Experience</small></span>
+                            </span>
+                            <svg class="experience-history-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+                        </span>
+                    </summary>
+                    <div class="experience-history-details">
+                        <p>Contributed to a $10K proposal for an AI vision system that detects lens contamination.</p>
+                        <div class="experience-tech" aria-label="NASA L'SPACE focus areas"><span>Python</span><span>Computer Vision</span><span>Technical Research</span><span>Project Management</span></div>
+                        <a href="https://www.lspace.asu.edu/proposal-writing-academy" target="_blank" rel="noopener noreferrer">View program <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
+                <details class="experience-history-item">
+                    <summary>
+                        <span class="experience-history-when"><time datetime="2025-05">May — Aug 2025</time><span class="experience-location">Austin, TX</span></span>
+                        <span class="experience-history-marker" aria-hidden="true"></span>
+                        <span class="experience-history-overview">
+                            <span class="experience-history-identity">
+                                <img src="images/arm2.jpg" alt="" width="42" height="42">
+                                <span><strong>Software Engineering Intern, Infrastructure</strong><small>Arm</small></span>
+                            </span>
+                            <svg class="experience-history-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+                        </span>
+                    </summary>
+                    <div class="experience-history-details">
+                        <p>• Contributed to Arm's open-source Fastpath project by integrating the SPECjbb2015 benchmark into an automated AWS EC2 performance pipeline using Python, Terraform, and Ansible.</p>
+                        <p>• Conducted pre-release user testing for Performix, a performance profiling and analysis toolkit for developers optimizing workloads on Arm infrastructure. Identified usability issues and worked closely with software engineers and a Staff UX Researcher on product improvements.</p>
+                        <div class="experience-tech" aria-label="Technologies used during the 2025 Arm internship"><span>Python</span><span>AWS</span><span>Linux</span><span>Terraform</span><span>Ansible</span><span>TypeScript</span><span>Electron</span><span>Open Source Development</span></div>
+                        <a href="https://www.arm.com/" target="_blank" rel="noopener noreferrer">Visit Arm <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
+                <details class="experience-history-item">
+                    <summary>
+                        <span class="experience-history-when"><time datetime="2025-01">Jan — May 2025</time><span class="experience-location">Baltimore, MD</span></span>
+                        <span class="experience-history-marker" aria-hidden="true"></span>
+                        <span class="experience-history-overview">
+                            <span class="experience-history-identity">
+                                <img src="images/cvni.jpg" alt="" width="42" height="42">
+                                <span><strong>Application Developer Intern</strong><small>CyberVillage Networkers</small></span>
+                            </span>
+                            <svg class="experience-history-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+                        </span>
+                    </summary>
+                    <div class="experience-history-details">
+                        <p>Improved client websites through WCAG and ADA-focused frontend updates and assistive-technology testing.</p>
+                        <div class="experience-tech" aria-label="Technologies used during the 2025 CyberVillage internship"><span>HTML</span><span>CSS</span><span>JSP</span><span>ASP</span><span>WCAG</span><span>NVDA</span><span>VoiceOver</span></div>
+                        <a href="https://www.linkedin.com/company/cybervillage-networkers-inc./posts/?feedView=all" target="_blank" rel="noopener noreferrer">View CyberVillage <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
+                <details class="experience-history-item">
+                    <summary>
+                        <span class="experience-history-when"><time datetime="2024-09">Sep — Dec 2024</time><span class="experience-location">Remote</span></span>
+                        <span class="experience-history-marker" aria-hidden="true"></span>
+                        <span class="experience-history-overview">
+                            <span class="experience-history-identity">
+                                <img src="images/openq.jpg" alt="" width="42" height="42">
+                                <span><strong>Software Engineering Intern</strong><small>OpenQQuantify</small></span>
+                            </span>
+                            <svg class="experience-history-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+                        </span>
+                    </summary>
+                    <div class="experience-history-details">
+                        <p>Built responsive Svelte interfaces for the company landing page and AI and robotics product pages while collaborating with a distributed engineering team.</p>
+                        <div class="experience-tech" aria-label="Technologies used at OpenQQuantify"><span>Svelte</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+                        <a href="https://www.openqquantify.com/" target="_blank" rel="noopener noreferrer">Visit OpenQQuantify <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
+                <details class="experience-history-item">
+                    <summary>
+                        <span class="experience-history-when"><time datetime="2023-07">Jul — Aug 2023</time><span class="experience-location">Remote</span></span>
+                        <span class="experience-history-marker" aria-hidden="true"></span>
+                        <span class="experience-history-overview">
+                            <span class="experience-history-identity">
+                                <img src="images/dcflightclub.jpg" alt="" width="42" height="42">
+                                <span><strong>Aviation Technology Intern</strong><small>DC Flight Club · PGCPS SYEP</small></span>
+                            </span>
+                            <svg class="experience-history-chevron" viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg>
+                        </span>
+                    </summary>
+                    <div class="experience-history-details">
+                        <p>• Built an airport operations game featuring passenger check-in, luggage screening, airport construction, air traffic control, and flight departures.</p>
+                        <p>• Developed a package-delivery drone project from research through presentation, creating the prototype and UML diagrams and presenting the final work to aviation professionals.</p>
+                        <div class="experience-tech" aria-label="DC Flight Club internship focus areas"><span>Game Development</span><span>Product Development</span><span>Aviation Systems</span><span>Technical Research</span></div>
+                    </div>
+                </details>
             </div>
-            
-            <!-- social media icons -->
-            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
-                <a href="https://github.com/kelechi055" class="visit-btn" target="_blank">
-                    <button style="
-                    background: transparent;
-                    border: none;
-                    color: #fff;
-                    border-radius: 9999px;
-                    padding: 0.5rem;
-                    ">
-                        <img src="images/gitwhite.png" alt="GitHub" width="25" height="25">
-                    </button>
-                </a>
 
-                <a href="https://www.linkedin.com/in/kelechi-opurum/" class="visit-btn" target="_blank">
-                    <button style="
-                    background: transparent;
-                    border: none;
-                    color: #fff;
-                    border-radius: 9999px;
-                    padding: 0.5rem;
-                    ">
-                        <img src="images/linkedin-white.png" alt="LinkedIn" width="25" height="25">
-                    </button>
+            <div class="experience-group-heading experience-reveal">
+                <span>Fellowships</span>
+            </div>
+
+            <div class="fellowship-grid">
+                <!-- FELLOWSHIP TEMPLATE: duplicate one fellowship-card to add another program. -->
+                <a class="fellowship-card experience-reveal" href="https://programs.code2040.org/" target="_blank" rel="noopener noreferrer">
+                    <div><img src="images/code2040.jpg" alt="" width="42" height="42"><span class="fellowship-arrow" aria-hidden="true">↗</span></div>
+                    <h3>CODE2040</h3>
+                    <p class="fellowship-role">Engineering Fellow</p>
+                    <p class="fellowship-description">Selected for a national engineering fellowship centered on technical growth, community, and career development.</p>
+                    <span>Sep 2025–June 2026</span>
                 </a>
-                
-                <a href="mailto:kelechiopurum2005@gmail.com" class="visit-btn" target="_blank">
-                    <button class="slide-down;" style="
-                    background: transparent;
-                    border: none;
-                    color: #fff;
-                    border-radius: 9999px;
-                    padding: 0.5rem;
-                    ">
-                        <img src="images/mail.png" alt="Email" width="25" height="25">
-                    </button>
+                <a class="fellowship-card experience-reveal" href="https://www.bvcc.vc/" target="_blank" rel="noopener noreferrer">
+                    <div><img src="images/bvcc-favicon.png" alt="" width="42" height="42"><span class="fellowship-arrow" aria-hidden="true">↗</span></div>
+                    <h3>Black Venture Capital Consortium</h3>
+                    <p class="fellowship-role">Software Engineering Fellow</p>
+                    <p class="fellowship-description">Completed a software engineering cohort covering web development, SDLC, data structures, cloud, APIs, and QA.</p>
+                    <span>Sep–Dec 2024</span>
+                </a>
+                <a class="fellowship-card experience-reveal" href="https://www.headstarter.co/" target="_blank" rel="noopener noreferrer">
+                    <div><img src="images/headstarter-favicon.png" alt="" width="42" height="42"><span class="fellowship-arrow" aria-hidden="true">↗</span></div>
+                    <h3>Headstarter</h3>
+                    <p class="fellowship-role">Software Engineering Fellow</p>
+                    <p class="fellowship-description">Completed engineering training and launched three full-stack AI applications.</p>
+                    <span>Jul–Sep 2024</span>
                 </a>
             </div>
-            </div>
-        </div>
         </div>
     </section>
 
-    
+
     <!-- TECH STACK -->
-
-    
-    <h2 style="
-        color: #FFFFFF;
-        animation: slideUp 2s forwards;
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 0;
-        margin-top: 100px;
-    "id="tech-stack">
-    technologies i usually build with 🔨
-    </h2>
-    
-    <!-- My Tech Stack -->
-    <div class="tech-stack" style="margin-bottom: 0;">
-        <div class="tech-stack-grid">
-            <img src="https://techstack-generator.vercel.app/python-icon.svg" alt="icon" class="icon" title='Python'/>
-            <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" class="icon" title='JavaScript'/>
-            <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" class="icon" title='TypeScript'/>
-            <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" class="icon" title='React'/>
-            <br>
-            <img src="images/html.png" class="icon" title="HTML"/>
-            <img src="images/css.png" class="icon" title="CSS"/>
-            <img src="images/nextjs.png" class="icon" title="NextJS"/>
-            <img src="images/tailwind.png" class="icon" title="Tailwind CSS"/>
-            <br>
-            <img src="images/visual-studio-code.png" class="icon" title="VS Code"/>
-            <img src="https://techstack-generator.vercel.app/github-icon.svg" alt="icon" class="icon" title='GitHub'/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" class="icon" title="Vercel"/>
-            <img src="images/firebase.png" class="icon" title="Firebase"/>
-            <br>
-            <img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="icon" class="icon" title='AWS'/>
-            <img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="icon" class="icon" title='Docker'/>
-            <img src="images/Linux.png" class="icon" title='Linux'/>
-            <img src="images/HashiCorp Terraform.png" class="icon" title='Terraform'/>
-            <br>
-            <img src="images/framer.png" class="icon" title='Framer'/>
-            <img src="images/figma.png" class="icon" title='Figma'/>
-            <img src="images/clerk.png" class="icon" title='Clerk'/>
-            <img src="images/stripe.png" class="icon" title='Stripe'/>
+    <section class="skills-showcase" id="tech-stack" aria-labelledby="tech-stack-title">
+        <div class="skills-showcase-inner">
+            <h2 id="tech-stack-title">tools i work with <span aria-hidden="true">🔨</span></h2>
+            <ul class="skills-grid" aria-label="Technologies and tools">
+                <li title="Python"><img src="https://techstack-generator.vercel.app/python-icon.svg" alt="Python" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="JavaScript"><img src="https://techstack-generator.vercel.app/js-icon.svg" alt="JavaScript" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="TypeScript"><img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="TypeScript" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="React"><img src="https://techstack-generator.vercel.app/react-icon.svg" alt="React" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Next.js"><img src="images/nextjs.png" alt="Next.js" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="HTML"><img src="images/html.png" alt="HTML" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="CSS"><img src="images/css.png" alt="CSS" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Tailwind CSS"><img src="images/tailwind.png" alt="Tailwind CSS" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Linux"><img src="images/Linux.png" alt="Linux" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="AWS"><img src="https://techstack-generator.vercel.app/aws-icon.svg" alt="AWS" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Terraform"><img src="images/HashiCorp Terraform.png" alt="Terraform" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Docker"><img src="https://techstack-generator.vercel.app/docker-icon.svg" alt="Docker" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="GitHub"><img src="https://techstack-generator.vercel.app/github-icon.svg" alt="GitHub" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Vercel"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="Vercel" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Firebase"><img src="images/firebase.png" alt="Firebase" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="VS Code"><img src="images/visual-studio-code.png" alt="Visual Studio Code" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Figma"><img src="images/figma.png" alt="Figma" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Framer"><img src="images/framer.png" alt="Framer" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Clerk"><img src="images/clerk.png" alt="Clerk" class="skills-icon" loading="lazy" decoding="async"></li>
+                <li title="Stripe"><img src="images/stripe.png" alt="Stripe" class="skills-icon" loading="lazy" decoding="async"></li>
+            </ul>
         </div>
+    </section>
+
+
     </div>
 
-    
-    </div>
-    
-    <!-- GALLERY SECTION -->
-    <section id="gallery" class="gallery-section">
-        <div class="gallery-container">
-    
-        <h2 class="proof-heading">
-            some proof i touch grass and <span>ship things</span>
+    <!--Script for scrolling-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const items = document.querySelectorAll('.gallery-item');
+
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function checkItems() {
+            items.forEach(item => {
+            if (isElementInViewport(item) && !item.classList.contains('viewed')) {
+                item.classList.add('slide-up');
+                item.classList.add('viewed');
+            }
+            });
+        }
+
+        window.addEventListener('scroll', checkItems);
+        window.addEventListener('resize', checkItems); // handle resize events
+        checkItems(); // check items on initial load
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.gallery-item');
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+
+                return (
+                    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom > 0
+                );
+            }
+
+            function checkItems() {
+                items.forEach(item => {
+                    if (isElementInViewport(item) && !item.classList.contains('viewed')) {
+                        item.classList.add('slide-up');
+                        item.classList.add('viewed');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkItems);
+            window.addEventListener('resize', checkItems);
+            checkItems();
+        });
+    </script>
+
+    <!-- PROJECTS SECTION -->
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" style="
+            color: #FFFFFF;
+            animation: slideUp 2s forwards;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        ">
+            the numbers speak for themselves.
         </h2>
+
+        <!-- my projects stats section ;) -->
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item" data-value="1000">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="users-icon">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="8" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Total Users</div>
+                </div>
+                <div class="stat-item" data-value="7000">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Page Views</div>
+                </div>
+                <div class="stat-item" data-value="10">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="code-icon">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item" data-value="4">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="award-icon">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Awards</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-container">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/bucketshowcase.png" alt="Bucket personalized bucket-list web app showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="Bucket" aria-label="View the Bucket project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Bucket 🪣</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--award" href="https://trybucket.vercel.app" target="_blank" rel="noopener noreferrer">🏆 1st Place + Best AI/ML · HackHounds 2025</a>
+                </div>
+                <p class="project-description">A personalized bucket-list curator for interns, tailoring ideas to location, interests, and budget.</p>
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>Framer</span>
+                    <span>React.js</span>
+                    <span>Next.js</span>
+                    <span>Gemini</span>
+                    <span>Material-UI</span>
+                    <span>Tailwind CSS</span>
+                    <span>Firebase</span>
+                    <span>Clerk</span>
+                </div>
+                <nav class="project-links" aria-label="Bucket project links">
+                    <a class="project-link project-link--primary" href="https://trybucket.vercel.app" target="_blank" rel="noopener noreferrer">Live site</a>
+                    <a class="project-link" href="https://github.com/kelechi055/bucket" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="project-link" href="https://devpost.com/software/bucket-3hzwcf" target="_blank" rel="noopener noreferrer">Devpost</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/showcase.png" alt="GameStock video game market dashboard showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="GameStock" aria-label="View the GameStock project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">GameStock 🎮📈</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--award" href="https://main--gamestockwebsite.netlify.app/" target="_blank" rel="noopener noreferrer">🏆 2nd Place · Next.js Hackathon 2024</a>
+                </div>
+                <p class="project-description">A focused dashboard that makes video game stocks easier to understand through market data, news, and insights.</p>
+                <div class="tech-stack">
+                    <span>Next.js</span>
+                    <span>TypeScript</span>
+                    <span>Python</span>
+                    <span>Tailwind CSS</span>
+                </div>
+                <nav class="project-links" aria-label="GameStock project links">
+                    <a class="project-link project-link--primary" href="https://main--gamestockwebsite.netlify.app/" target="_blank" rel="noopener noreferrer">Live site</a>
+                    <a class="project-link" href="https://github.com/saikrupa82/WeCrackedHackathon" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="project-link" href="https://devpost.com/software/gamestock-a8u7zm" target="_blank" rel="noopener noreferrer">Devpost</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/huzzhub-showcase.png" alt="HuzzHub AI assistant website showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="HuzzHub" aria-label="View the HuzzHub project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">HuzzHub 😏</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--award" href="https://huzz-hub.vercel.app/" target="_blank" rel="noopener noreferrer">🏆 Track Winner · Brainrot Hackathon 2024</a>
+                </div>
+                <p class="project-description">A playful AI app that delivers shareable, TikTok-style pickup lines through Gemini.</p>
+                <div class="tech-stack">
+                    <span>Gemini</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                </div>
+                <nav class="project-links" aria-label="HuzzHub project links">
+                    <a class="project-link project-link--primary" href="https://huzz-hub.vercel.app/" target="_blank" rel="noopener noreferrer">Live site</a>
+                    <a class="project-link" href="https://github.com/kelechi055/HuzzHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="project-link" href="https://devpost.com/software/huzzhub-h52udq" target="_blank" rel="noopener noreferrer">Devpost</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/budgetmaxxing-showcase.png" alt="BudgetMaxxing student budgeting mobile app showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="BudgetMaxxing" aria-label="View the BudgetMaxxing project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+                <span class="project-image-status">🚧 In progress</span>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">BudgetMaxxing 💸</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--ownership" href="https://github.com/mileshall1/BudgetMaxxing" target="_blank" rel="noopener noreferrer">🫂 Team Project</a>
+                </div>
+                <p class="project-description">A student-first budgeting app that turns bank activity into clear spending insights, alerts, and guidance.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQLAlchemy</span>
+                    <span>PostgreSQL</span>
+                    <span>SQLite</span>
+                    <span>Plaid</span>
+                    <span>Veryfi / Mindee</span>
+                    <span>OpenAI / Gemini</span>
+                    <span>JWT</span>
+                </div>
+                <nav class="project-links" aria-label="BudgetMaxxing project links">
+                    <a class="project-link" href="https://github.com/mileshall1/BudgetMaxxing" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/stattrack-showcase.png" alt="StatTrack NBA statistics dashboard showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="StatTrack" aria-label="View the StatTrack project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">StatTrack 📊</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--ownership" href="https://github.com/mileshall1/StatTrack" target="_blank" rel="noopener noreferrer">🫂 Team Project</a>
+                </div>
+                <p class="project-description">An NBA dashboard with an Express REST API for adding, saving, and reviewing player game stats.</p>
+                <div class="tech-stack">
+                    <span>Node.js</span>
+                    <span>Express</span>
+                    <span>JavaScript</span>
+                    <span>JSON</span>
+                    <span>HTML / CSS</span>
+                </div>
+                <nav class="project-links" aria-label="StatTrack project links">
+                    <a class="project-link" href="https://github.com/mileshall1/StatTrack" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/cardwiz.png" alt="Cardwiz AI flashcard generator showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="Cardwiz" aria-label="View the Cardwiz project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Cardwiz 🧙‍♂️</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--ownership" href="https://cardwiz-ai.vercel.app/" target="_blank" rel="noopener noreferrer">👤 Solo Project</a>
+                </div>
+                <p class="project-description">An AI study tool that turns any content into review-ready flashcards using Gemini and Next.js.</p>
+                <div class="tech-stack">
+                    <span>Gemini</span>
+                    <span>JavaScript</span>
+                    <span>Next.js</span>
+                    <span>React</span>
+                </div>
+                <nav class="project-links" aria-label="Cardwiz project links">
+                    <a class="project-link project-link--primary" href="https://cardwiz-ai.vercel.app/" target="_blank" rel="noopener noreferrer">Live site</a>
+                    <a class="project-link" href="https://github.com/kelechi055/cardwiz" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/DailyDoseShowCase.png" alt="Daily Dose wellness and journaling app showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="Daily Dose" aria-label="View the Daily Dose project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Daily Dose 🙂</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--event" href="https://www.daily-dose.me/" target="_blank" rel="noopener noreferrer">❄️ ColorStack Winterbreak Hackathon 2024</a>
+                </div>
+                <p class="project-description">A daily wellness app pairing curated motivation with journaling insights powered by AI tone analysis.</p>
+                <div class="tech-stack">
+                    <span>Next.js</span>
+                    <span>Tailwind CSS</span>
+                    <span>OpenAI</span>
+                    <span>AWS Dynamo</span>
+                    <span>Chart.js</span>
+                    <span>Node.js</span>
+                    <span>NextAuth.js</span>
+                    <span>AWS SES</span>
+                </div>
+                <nav class="project-links" aria-label="Daily Dose project links">
+                    <a class="project-link project-link--primary" href="https://www.daily-dose.me/" target="_blank" rel="noopener noreferrer">Live site</a>
+                    <a class="project-link" href="https://github.com/BG-legacy/Daily-Dose" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a class="project-link" href="https://devpost.com/software/daily-dose-f2pm6t" target="_blank" rel="noopener noreferrer">Devpost</a>
+                </nav>
+            </div>
+        </article>
+
+        <!-- Project 8 -->
+        <article class="project-card">
+            <div class="project-media">
+                <img class="project-image" src="images/pantrackshowcase.png" alt="Pantrack pantry management app showcase" loading="lazy" decoding="async">
+                <button class="project-image-open" type="button" data-project-title="Pantrack" aria-label="View the Pantrack project image full size">
+                    <span class="project-image-hint" aria-hidden="true">View full image</span>
+                </button>
+            </div>
+            <div class="project-content">
+                <h3 class="project-title">Pantrack 🍳</h3>
+                <div class="project-meta">
+                    <a class="project-context project-context--ownership" href="https://pantrackapp.vercel.app/" target="_blank" rel="noopener noreferrer">👤 Solo Project</a>
+                </div>
+                <p class="project-description">A real-time pantry manager for tracking ingredients and discovering recipes from what is already available.</p>
+                <div class="tech-stack">
+                    <span>Spoonacular API</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Firebase</span>
+                </div>
+                <nav class="project-links" aria-label="Pantrack project links">
+                    <a class="project-link project-link--primary" href="https://pantrackapp.vercel.app/" target="_blank" rel="noopener noreferrer">Live site</a>
+                    <a class="project-link" href="https://github.com/kelechi055/pantrack" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </nav>
+            </div>
+        </article>
+        </div>
+    </section>
+
+    <dialog class="project-lightbox" id="project-lightbox" aria-labelledby="project-lightbox-caption">
+        <div class="project-lightbox-shell">
+            <button class="project-lightbox-close" type="button" aria-label="Close project image viewer">&times;</button>
+            <figure>
+                <img id="project-lightbox-image" alt="">
+                <figcaption id="project-lightbox-caption"></figcaption>
+            </figure>
+        </div>
+    </dialog>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section" aria-labelledby="work-took-me-title">
+        <div class="gallery-container">
+
+    <h2 id="work-took-me-title">where the work took me <span aria-hidden="true">🧑🏽‍💻</span></h2>
 
         <!-- Featured Image Section -->
         <section class="about featured-win" style="display: flex; justify-content: center; margin-top: 0; position: relative;">
@@ -630,7 +869,7 @@
                 style="border-radius: 20px; width: 100%; height: 100%; object-fit: contain; ">
             </div>
         </div> -->
-        
+
         <!-- Presentation Pic -->
         <div class="presentation-wrap" style="
             display: flex;
@@ -775,609 +1014,157 @@
         </div>
 
     </section>
-  
-    <section>
-        <div class="gallery-title" style="font-size: 1.0rem; animation: reverse;">
-            <div class="gallery-title" id="projects" style="font-size: 1.0rem; animation: reverse; text-align: center;">
-                <h2 style="
-                    color: #FFFFFF;
-                    animation: slideUp 2s forwards;
-                    font-size: 2rem;
-                    font-weight: bold;
-                    margin-bottom: 50px;
-                    margin-top: 30px;
-                    font-weight: 200;
-                ">
-                    <span style="font-style: italic;"> but when it's time to </span>
-                    <a style="font-weight: 600;">lock in...</a>
-                </h2>
-
-            </div>
         </div>
     </section>
 
-    <!--Script for scrolling-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        const items = document.querySelectorAll('.gallery-item');
-        
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-        
-        function checkItems() {
-            items.forEach(item => {
-            if (isElementInViewport(item) && !item.classList.contains('viewed')) {
-                item.classList.add('slide-up');
-                item.classList.add('viewed');
-            }
-            });
-        }
-        
-        window.addEventListener('scroll', checkItems);
-        window.addEventListener('resize', checkItems); // handle resize events
-        checkItems(); // check items on initial load
-        });
-    </script>
-
-    <script>
-        // this will select all the images
-        const images = document.querySelectorAll('.image');
-
-        images.forEach(image => {
-            // no right click on images :)
-            image.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-            });
-
-            // prevent users from dragging and dropping images
-            image.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-            });
-        });
-
-        // no right click on all images on the page
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-            }
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const items = document.querySelectorAll('.gallery-item');
-
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-               
-                return (
-                    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.bottom > 0
-                );
-            }
-
-            function checkItems() {
-                items.forEach(item => {
-                    if (isElementInViewport(item) && !item.classList.contains('viewed')) {
-                        item.classList.add('slide-up');
-                        item.classList.add('viewed');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', checkItems);
-            window.addEventListener('resize', checkItems);
-            checkItems(); 
-        });
-    </script>
-
-  <!-- PROJECTS SECTION -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Popup background */
-        .popup {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-        }
-
-        /* Popup content */
-        .popup-content {
-            background-color: #1D1D1F;
-            margin: 5% auto;
-            padding: 20px;
-            border-radius: 30px;
-            width: 80%;
-            max-width: 900px;
-            position: center;
-        }
-
-        /* Close button */
-        .close {
-            color: #ff0000;
-            float: right;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: rgb(160, 15, 15);
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Popup image */
-        #popup-image {
-            width: 100%;
-            height: auto;
-        }
-    </style>
-</head>
-
-    <!--Projects Section-->
-
-    <h2 style="
-        color: #FFFFFF;
-        animation: slideUp 2s forwards;
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    ">
-    i build, deploy + scale🤘🏾🚀
-    </h2>
-
-    <!-- my projects stats section ;) -->
-    <div class="stats-section">
-        <div class="stats-grid">
-        <div class="stat-item" data-value="1000">
-            <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="users-icon">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="8" r="4"></circle>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
-            </div>
-            <div class="stat-value">0</div>
-            <div class="stat-label">Total Users</div>
-        </div>
-        <div class="stat-item" data-value="7000">
-            <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
-                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            </div>
-            <div class="stat-value">0</div>
-            <div class="stat-label">Page Views</div>
-        </div>
-        <div class="stat-item" data-value="10">
-            <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="code-icon">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            </div>
-            <div class="stat-value">0</div>
-            <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat-item" data-value="4">
-            <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="award-icon">
-                <circle cx="12" cy="8" r="7"></circle>
-                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-            </svg>
-            </div>
-            <div class="stat-value">0</div>
-            <div class="stat-label">Awards</div>
-        </div>
-        </div>
-    </div>
-
-    <div class="projects-container">
-
-        <!-- Project 1 -->
-        <div class="project-card" style="
-        background: transparent;
-        border: 1px solid #222222;
-    ">
-            <div class="visit-btn">
-                <img class="project-image" src="images/bucketshowcase.png" alt="Bucket Project Image">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">Bucket 🪣</h3>
-                <a class="placement-badge" href="https://trybucket.vercel.app" target="_blank">
-                    🏆 1st Place & Best AI/ML Hack @ HackHounds 2025
-                </a>
-                <p class="project-description">
-                    A bucket list curator offering personalized recommendations based on location, interests, and budget — made for interns, by interns.
-                </p>
-                <div class="tech-stack">
-                    <span>JavaScript</span>
-                    <span>TypeScript</span>
-                    <span>Framer</span>
-                    <span>React.js</span>
-                    <span>Next.js</span>
-                    <span>Gemini</span>
-                    <span>Material-UI</span>
-                    <span>Tailwind CSS</span>
-                    <span>Firebase</span>
-                    <span>Clerk</span>
-                </div>
-                
-                <div class="project-links">
-                    <a class="project-link" href="https://devpost.com/software/bucket-3hzwcf" target="_blank">Devpost</a>
-                    <a class="project-link" href="https://trybucket.vercel.app" target="_blank" style="display: inline-flex; align-items: center; gap: 0.25rem;">
-                        Live Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                          <polyline points="15 3 21 3 21 9" />
-                          <line x1="10" y1="14" x2="21" y2="3" />
-                        </svg>
-                      </a>
-                      
-                    <a class="project-link" href="https://github.com/kelechi055/bucket" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-            <div class="project-image-container">
-                <img class="project-image" src="images/showcase.png" alt="GameStock Project Image">
-            </div>
-            <div class="project-content">
-                <h3 class="project-title">GameStock🎮📈</h3>
-                <a class="placement-badge" href="hhttps://main--gamestockwebsite.netlify.app/">🏆 2nd Place @ Next.js Hackathon 2024</a>
-                <p class="project-description">
-                    Crafted a Next.js web app that simplifies video game stocks, delivering real-time news, stock prices, and financial insights through integrated APIs.
-                </p>
-                <div class="tech-stack">
-                    <span>Next.js</span>
-                    <span>TypeScript</span>
-                    <span>Python</span>
-                    <span>Tailwind CSS</span>
-                </div>
-                <div class="project-links">
-                    <a class="project-link" href="https://devpost.com/software/gamestock-a8u7zm" target="_blank">Devpost</a>
-                    <a class="project-link" href="https://main--gamestockwebsite.netlify.app/" target="_blank">Live Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                    </a>
-                    <a class="project-link" href="https://github.com/saikrupa82/WeCrackedHackathon" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-           <div class="project-image-container">
-            <img class="project-image" src="images/cardwiz.png" alt="VibeCheck Project Image">
-           </div>
-            <div class="project-content">
-                <h3 class="project-title">Cardwiz🧙‍♂️</h3>
-                <a class="placement-badge" href="https://cardwiz-ai.vercel.app/">👤 Solo Project | 🔥40+ Signed-up Users</a>
-                <p class="project-description">
-                    Engineered an AI-driven web app that generates flashcards from any content, utilizing Google’s Gemini AI and a full-stack architecture for seamless study and review.
-                </p>
-                <div class="tech-stack">
-                    <span>Gemini</span>
-                    <span>JavaScript</span>
-                    <span>Next.js</span>
-                    <span>React</span>
-                </div>
-                <div class="project-links">
-                    <a class="project-link" href="https://cardwiz-ai.vercel.app/" target="_blank">Live Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                    </a>
-                    <a class="project-link" href="https://github.com/kelechi055/cardwiz" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="project-card">
-            <img class="project-image" src="images/DailyDoseShowCase.png" alt="DailyDose Project Image">
-            <div class="project-content">
-                <h3 class="project-title">Daily Dose</h3>
-                <a class="placement-badge" href="https://www.daily-dose.me/">❄️ ColorStack Winterbreak Hackathon 2024</a>
-                <p class="project-description">
-                    A web app that inspires daily well-being by delivering curated motivational content and personalized journaling insights through AI-driven tone analysis.
-                </p>
-                <div class="tech-stack">
-                    <span>Next.js</span>
-                    <span>Tailwind CSS</span>
-                    <span>OpenAI</span>
-                    <span>AWS Dynamo</span>
-                    <span>Chart.js</span>
-                    <span>Node.js</span>
-                    <span>NextAuth.js</span>
-                    <span>AWS SES</span>
-                </div>
-                <div class="project-links">
-                    <a class="project-link" href="https://www.daily-dose.me/" target="_blank">Live Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                    </a>
-                    </a>
-                    <a class="project-link" href="https://github.com/BG-legacy/Daily-Dose" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="project-card">
-            <img class="project-image" src="images/huzzhub.png" alt="HuzzHub Project Image">
-            <div class="project-content">
-                <h3 class="project-title">😏HuzzHub</h3>
-                <a class="placement-badge" href="https://devpost.com/software/huzzhub-h52udq" target="_blank">
-                    🏆 Winner @ Brainrot Hackathon 2024 | ⭐ 300+ Visitors
-                </a>
-                <p class="project-description">
-                    A meme web app with "Chill Guy," an AI that delivers TikTok-style pickup lines using Next.js and Gemini API.
-                </p>
-                <div class="tech-stack">
-                    <span>Gemini</span>
-                    <span>JavaScript</span>
-                    <span>React.js</span>
-                </div>
-                <div class="project-links">
-                    <a class="project-link" href="https://huzz-hub.vercel.app/" target="_blank">Live Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                    </a>
-                    <a class="project-link" href="https://github.com/kelechi055/HuzzHub" target="_blank">GitHub Repo</a>
-                    <a class="project-link" href="https://devpost.com/software/huzzhub-h52udq" target="_blank">Devpost</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card">
-            <img class="project-image" src="images/pantrackshowcase.png" alt="AI Pantry Tracker Project Image">
-            <div class="project-content">
-                <h3 class="project-title">🍳Pantrack</h3>
-                <a class="placement-badge" href="https://pantrackapp.vercel.app/">👤 Solo Project | 🔥60+ Signed-up Users</a>
-                <p class="project-description">
-                    Developed a real-time web app for effortless pantry item management, recipe discovery, and pantry tracking.
-                </p>
-                <div class="tech-stack">
-                    <span>Spoontacular API</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Firebase</span>
-                </div>
-                <div class="project-links">
-                    <a class="project-link" href="https://pantrackapp.vercel.app/" target="_blank">Live Website
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                            <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                            <polyline points="15 3 21 3 21 9" />
-                            <line x1="10" y1="14" x2="21" y2="3" />
-                          </svg>
-                    </a>
-                    <a class="project-link" href="https://github.com/kelechi055/pantrack" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 7-->
-        <div class="project-card">
-            <img class="project-image" src="images/portfolioshowcase.png" alt="Portfolio Project Image">
-            <div class="project-content">
-                <h3 class="project-title">💼My Portfolio</h3>
-                <a class="placement-badge" href="/">👤 Solo Project | ⭐1000+ Visitors</a>
-                <p class="project-description">
-                    (this website) Built a responsive portfolio website to showcase my skills, projects, featuring engaging content optimized for all devices.
-                </p>
-                <div class="tech-stack">
-                    <span>JavaScript</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                </div>
-            </div>   
-        </div>
-    </div>
-
-        <!-- Additional C2Action -->
-        <div style="padding-top: 0.5rem;">
-            <h2 style="
-                color: #FFFFFF;
-                animation: slideUp 2s forwards;
-                font-size: 1rem;
-                font-weight: 200;
-                margin-bottom: 1rem;
-            ">
-                curious? 👀
+    <!-- Closing contact call to action -->
+    <section class="contact-cta" aria-labelledby="contact-title">
+        <div class="contact-cta__main">
+            <h2 id="contact-title" class="curious-heading">
+                curious?
+                <span class="curious-eyes" aria-hidden="true">
+                    <span class="curious-eye"><span class="curious-pupil"></span></span>
+                    <span class="curious-eye"><span class="curious-pupil"></span></span>
+                </span>
             </h2>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-bottom: 20px;">
-            <!-- Get in Touch Button 2 -->
-            <div class="center-container">
-                <a href="mailto:kelechiopurum2005@gmail.com" class="contact-button">
-                    <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
-                        <path d="M4 4h16v16H4z" fill="none"/>
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                    <span class="btn-text">Get In Touch</span>
-                </a>
-            </div>
-            
-            <a href="#home" class="top-arrow-link"style="display: block; margin-left: 90%;  margin-top: -50px;">
-                <img src="/images/top-arrow.png" alt="Scroll Back Up" width="45"/>
+
+            <a href="mailto:kelechiopurum2005@gmail.com" class="contact-button" aria-label="Email Kelechi">
+                <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4h16v16H4z" fill="none"/>
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span class="btn-text">Get In Touch</span>
             </a>
-
-
         </div>
+
+        <a href="#home" class="top-arrow-link" aria-label="Back to top">
+            <img src="/images/top-arrow.png" alt="" width="50" height="45"/>
+        </a>
+    </section>
 
     <!-- FOOTER -->
     <div class="footer">
-        <footer>&copy; Kelechi Opurum 2025. All rights reserved.</footer>
+        <footer>Copyright &copy; Kelechi Opurum <span id="current-year"></span>. All rights reserved.</footer>
     </div>
 
-    <!-- Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <img id="popup-image" src="" alt="Project Image">
+    <!-- Local portfolio assistant: curated answers, no external AI service. -->
+    <aside class="portfolio-assistant" data-portfolio-assistant aria-label="Kelechi portfolio assistant">
+        <div class="portfolio-assistant__discovery" id="portfolio-assistant-discovery" data-assistant-discovery role="tooltip" hidden>
+            Skip the scroll. Ask me anything.
         </div>
-    </div>
 
-    <!--STATS SECTION SCRIPT-->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-        const statsItems = document.querySelectorAll('.stat-item');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateStatItem(entry.target);
-                observer.unobserve(entry.target);
-            }
-            });
-        }, { threshold: 0.1 });
-        
-        statsItems.forEach(item => {
-            observer.observe(item);
-        });
-        
-        document.querySelector('.stats-heading').classList.add('animate-in');
-        });
+        <button
+            class="portfolio-assistant__launcher"
+            type="button"
+            data-assistant-launcher
+            aria-haspopup="dialog"
+            aria-controls="portfolio-assistant-panel"
+            aria-expanded="false"
+            aria-label="Open Kelechi's portfolio assistant"
+        >
+            <span class="portfolio-assistant__launcher-mark" aria-hidden="true">
+                <svg class="portfolio-assistant__bot-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <path d="M16 8V4m-3 0h6M10.5 8.5h11a5 5 0 0 1 5 5v7a5 5 0 0 1-5 5h-11a5 5 0 0 1-5-5v-7a5 5 0 0 1 5-5ZM12.5 14l-3 3 3 3m7-6 3 3-3 3m-3.5-7-2 8"></path>
+                </svg>
+                <span class="portfolio-assistant__launcher-status"></span>
+            </span>
+            <span class="portfolio-assistant__launcher-copy">
+                <span class="portfolio-assistant__launcher-eyebrow" style="white-space: nowrap;">HAVE A QUESTION?</span>
+                <span class="portfolio-assistant__launcher-label">Ask Away</span>
+            </span>
+            <span class="portfolio-assistant__launcher-arrow" aria-hidden="true">↗</span>
+        </button>
 
-        function animateStatItem(statItem) {
-        statItem.style.opacity = '1';
-        statItem.style.transform = 'translateY(0)';
-        
-        const iconContainer = statItem.querySelector('.icon-container');
-        iconContainer.style.opacity = '1';
-        iconContainer.style.transform = 'scale(1)';
-        
-        const valueElement = statItem.querySelector('.stat-value');
-        const labelElement = statItem.querySelector('.stat-label');
-        
-        setTimeout(() => {
-            valueElement.style.opacity = '1';
-            valueElement.style.transform = 'translateY(0)';
-        }, 200);
-        
-        setTimeout(() => {
-            labelElement.style.opacity = '1';
-            labelElement.style.transform = 'translateY(0)';
-        }, 300);
-        
-        const finalValue = parseInt(statItem.dataset.value, 10);
-        animateCounter(valueElement, finalValue);
-        }
+        <section
+            class="portfolio-assistant__panel"
+            id="portfolio-assistant-panel"
+            data-assistant-panel
+            role="dialog"
+            aria-modal="false"
+            aria-labelledby="portfolio-assistant-title"
+            aria-describedby="portfolio-assistant-description"
+            hidden
+        >
+            <div class="portfolio-assistant__ambient" aria-hidden="true"></div>
+            <header class="portfolio-assistant__header">
+                <div class="portfolio-assistant__header-row">
+                    <div class="portfolio-assistant__avatar" aria-hidden="true">
+                        <img src="images/circlekel2.png" alt="" width="44" height="44">
+                    </div>
+                    <div class="portfolio-assistant__identity">
+                        <span class="portfolio-assistant__identity-kicker">PORTFOLIO / LOCAL GUIDE</span>
+                        <h2 id="portfolio-assistant-title">Ask about Kelechi!</h2>
+                        <p id="portfolio-assistant-description">
+                            <span class="portfolio-assistant__online-dot" aria-hidden="true"></span>
+                            <span>Online</span>
+                        </p>
+                    </div>
+                    <button class="portfolio-assistant__close" type="button" data-assistant-close aria-label="Close portfolio assistant">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="m6 6 12 12M18 6 6 18"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="portfolio-assistant__scope" aria-hidden="true">
+                    <span>Experience</span>
+                    <span>Projects</span>
+                    <span>Beyond code</span>
+                </div>
+            </header>
 
-        // Animation Counter for Stats
-        function animateCounter(element, finalValue) {
-            const duration = 5000; // 5 secs
-            const startTime = performance.now();
-            let currentValue = 0;
+            <div
+                class="portfolio-assistant__conversation"
+                data-assistant-conversation
+                role="region"
+                aria-label="Conversation with Kelechi Assistant"
+                tabindex="0"
+            >
+                <p class="portfolio-assistant__thread-label">CURATED ANSWERS · NO EXTERNAL AI</p>
+                <div
+                    class="portfolio-assistant__messages"
+                    data-assistant-messages
+                    role="log"
+                    aria-live="polite"
+                    aria-relevant="additions"
+                ></div>
+                <div
+                    class="portfolio-assistant__suggestions"
+                    data-assistant-suggestions
+                    role="group"
+                    aria-label="Suggested questions"
+                ></div>
+            </div>
 
-            function updateCounter(timestamp) {
-                const elapsed = timestamp - startTime;
-                const progress = Math.min(elapsed / duration, 1);
+            <form class="portfolio-assistant__composer" data-assistant-form>
+                <label class="portfolio-assistant__sr-only" for="portfolio-assistant-input">Ask about Kelechi</label>
+                <div class="portfolio-assistant__composer-shell">
+                    <span class="portfolio-assistant__prompt-mark" aria-hidden="true">›</span>
+                    <textarea
+                        class="portfolio-assistant__input"
+                        id="portfolio-assistant-input"
+                        data-assistant-input
+                        rows="1"
+                        maxlength="500"
+                        placeholder="Ask about Kelechi..."
+                        autocomplete="off"
+                    ></textarea>
+                    <button class="portfolio-assistant__send" type="submit" data-assistant-send aria-label="Send message" disabled>
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M5 12h14M13 6l6 6-6 6"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="portfolio-assistant__composer-note" aria-hidden="true">
+                    <span>Enter to send</span>
+                    <span>Local answers only</span>
+                </div>
+            </form>
+        </section>
+    </aside>
 
-                currentValue = Math.floor(progress * finalValue);
-                element.textContent = currentValue.toLocaleString() + "+";
-
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = finalValue.toLocaleString() + "+";
-                }
-        }
-        requestAnimationFrame(updateCounter);
-    }
-
-    </script>
-
-    <script>
-        const projectImages = document.querySelectorAll('.project-image');
-        const popup = document.getElementById('popup');
-        const popupImage = document.getElementById('popup-image');
-
-        projectImages.forEach(image => {
-            image.addEventListener('click', function() {
-                popupImage.src = this.src;
-                popup.style.display = 'block';
-            });
-        });
-
-        function closePopup() {
-            popup.style.display = 'none';
-        }
-
-        projectImages.forEach(image => {
-            image.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-            });
-
-            // this prevents drag and drop
-            image.addEventListener('dragstart', function(e) {
-                e.preventDefault();
-            });
-        });
-
-        // prevents right-click context menu
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.preventDefault();
-            }
-        });
-    </script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-  const progressBar = document.querySelector('.scroll-progress-bar');
-  
-  // Function to update progress bar
-  function updateProgressBar() {
-    const scrollPosition = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercentage = (scrollPosition / scrollHeight) * 100;
-    
-    progressBar.style.width = `${scrollPercentage}%`;
-  }
-  
-  // Listen for scroll events
-  window.addEventListener('scroll', updateProgressBar);
-  
-  // Initialize on page load
-  updateProgressBar();
-});
-    </script>
-  <!-- NAVBAR // removed -->
-  <!-- SCRIPTS -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot-data.js"></script>
+    <script src="chatbot-matcher.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>
